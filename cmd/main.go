@@ -1,50 +1,45 @@
 package main
 
 import (
-	"context"
 	"fmt"
-	"log"
 	"net/http"
 	"os"
 
-	"github.com/aws/aws-sdk-go-v2/aws"
-	"github.com/aws/aws-sdk-go-v2/config"
-	"github.com/aws/aws-sdk-go-v2/service/s3"
 	"github.com/go-chi/chi/v5"
 )
 
-var (
-	client *s3.Client
-)
+// var (
+// 	client *s3.Client
+// )
 
-func init() {
-	cfg, err := config.LoadDefaultConfig(context.TODO())
-	if err != nil {
-		log.Fatal(err)
-	}
+// func init() {
+// 	cfg, err := config.LoadDefaultConfig(context.TODO())
+// 	if err != nil {
+// 		log.Fatal(err)
+// 	}
 
-	client = s3.NewFromConfig(cfg)
-}
+// 	client = s3.NewFromConfig(cfg)
+// }
 
-func listBuckets() {
-	output, err := client.ListObjectsV2(context.TODO(), &s3.ListObjectsV2Input{
-		Bucket: aws.String("lc-solutions-bucket"),
-	})
-	if err != nil {
-		log.Fatal(err)
-	}
+// func listBuckets() {
+// 	output, err := client.ListObjectsV2(context.TODO(), &s3.ListObjectsV2Input{
+// 		Bucket: aws.String("lc-solutions-bucket"),
+// 	})
+// 	if err != nil {
+// 		log.Fatal(err)
+// 	}
 
-	log.Println("first page results")
-	for _, object := range output.Contents {
-		log.Printf("key=%s size=%d", aws.ToString(object.Key), *object.Size)
-	}
-}
+// 	log.Println("first page results")
+// 	for _, object := range output.Contents {
+// 		log.Printf("key=%s size=%d", aws.ToString(object.Key), *object.Size)
+// 	}
+// }
 
 func main() {
 	router := chi.NewRouter()
 
 	router.Get("/", func(w http.ResponseWriter, r *http.Request) {
-		listBuckets()
+		// listBuckets()
 		fmt.Fprintln(w, "Hello World")
 	})
 
