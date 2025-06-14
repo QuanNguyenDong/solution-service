@@ -33,8 +33,8 @@ on:
 env:
   AWS_REGION: ap-southeast-2
   ECR_REPOSITORY: datastructues
-  ECS_SERVICE: solution-task-definition-service-sj22nic8
-  ECS_CLUSTER: sociable-lion-35x5iw
+  ECS_SERVICE: datastructures-service-xy5yeq4y
+  ECS_CLUSTER: strong-parrot-x599s4
   ECS_TASK_DEFINITION: .aws/task-definition.json
   CONTAINER_NAME: solution-service
 
