@@ -6,10 +6,10 @@ on:
 
 env:
   AWS_REGION: ap-southeast-2
-  ECR_REPOSITORY: solution-service
-  ECS_CLUSTER: my-ecs-cluster
-  ECS_SERVICE: my-ecs-service
-  ECS_TASK_DEFINITION: my-ecs-task
+  ECR_REPOSITORY: datastructures
+  ECS_CLUSTER: powerful-parrot-w1ktsm
+  ECS_SERVICE: backend-task-definition-service-ea0dna9i
+  ECS_TASK_DEFINITION: backend-task-definition
 
 jobs:
   deploy:
