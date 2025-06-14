@@ -32,7 +32,7 @@ on:
 
 env:
   AWS_REGION: ap-southeast-2
-  ECR_REPOSITORY: datastructues
+  ECR_REPOSITORY: datastructures
   ECS_SERVICE: datastructures-service-xy5yeq4y
   ECS_CLUSTER: strong-parrot-x599s4
   ECS_TASK_DEFINITION: .aws/task-definition.json
