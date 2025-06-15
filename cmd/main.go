@@ -5,9 +5,11 @@ import (
 	"net/http"
 
 	"github.com/QuanNguyenDong/solution-service/internal/router"
+	"github.com/joho/godotenv"
 )
 
 func main() {
+	godotenv.Load()
 	router := router.New()
 
 	port := "8080"

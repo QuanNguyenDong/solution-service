@@ -36,7 +36,7 @@ env:
   ECS_SERVICE: solution-service-t8kwvhbs
   ECS_CLUSTER: proud-rabbit-m382gg
   ECS_TASK_DEFINITION: .aws/task-definition.json
-  CONTAINER_NAME: solution-service
+  CONTAINER_NAME: solution-container
 
 permissions:
   contents: read
